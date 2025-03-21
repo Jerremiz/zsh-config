@@ -6,8 +6,7 @@
 个人 ZSH 配置，用于优化和增强命令行体验。包含 Oh-My-ZSH 框架、Powerlevel10k 主题及常用插件。
 
 ## 🖼️ 预览
-![Powerlevel10k 预览-1](/images//preview-1.png)
-![Powerlevel10k 预览-2](/images//preview-2.png)
+![Powerlevel10k 预览](/assets//preview.gif)
 
 ## 📥 安装步骤
 
