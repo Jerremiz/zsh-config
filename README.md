@@ -10,23 +10,35 @@
 
 ## 📥 安装步骤
 
-### 1. 安装 ZSH、Git 和 Curl
+### 🚀 一键安装（推荐）
+
+使用提供的一键安装脚本，可以自动完成所有配置步骤：
+
+```shell
+bash -c "$(wget https://raw.githubusercontent.com/Jerremiz/zsh-config/main/install.sh -O -)"
+```
+
+### 手动安装
+
+如果您希望手动安装和配置，可以按照以下步骤操作：
+
+#### 1. 安装 ZSH、Git 和 Curl
 
 ```shell
 sudo apt update
 sudo apt install zsh git curl -y
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 ```
 
-### 2. 安装 Oh-My-ZSH
+#### 2. 安装 Oh-My-ZSH
 
 Oh-My-ZSH 是一个功能强大的 ZSH 配置管理框架：
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
-### 3. 安装 Powerlevel10k 主题
+#### 3. 安装 Powerlevel10k 主题
 
 Powerlevel10k 是一个美观的 ZSH 主题：
 
@@ -34,7 +46,7 @@ Powerlevel10k 是一个美观的 ZSH 主题：
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-### 4. 安装推荐插件
+#### 4. 安装推荐插件
 
 ```shell
 # 自动补全插件
@@ -44,16 +56,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### 5. 应用配置文件
+#### 5. 应用配置文件
 
 将本仓库中的配置文件复制到用户主目录：
 
 ```shell
 # 复制 .zshrc 到主目录
-cp .zshrc ~/.zshrc
+wget -O ~/.zshrc https://raw.githubusercontent.com/Jerremiz/zsh-config/main/.zshrc
 
 # 复制 Powerlevel10k 配置文件到主目录
-cp .p10k.zsh ~/.p10k.zsh
+wget -O ~/.p10k.zsh https://raw.githubusercontent.com/Jerremiz/zsh-config/main/.p10k.zsh
 
 # 使配置生效
 source ~/.zshrc
