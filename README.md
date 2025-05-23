@@ -22,11 +22,11 @@ bash -c "$(wget https://raw.githubusercontent.com/Jerremiz/zsh-config/main/insta
 
 如果您希望手动安装和配置，可以按照以下步骤操作：
 
-#### 1. 安装 ZSH、Git 和 Curl
+#### 1. 安装 ZSH、Git 和 Wget
 
 ```shell
 sudo apt update
-sudo apt install zsh git curl -y
+sudo apt install zsh git wget -y
 sudo chsh -s /bin/zsh
 ```
 
